@@ -1,0 +1,50 @@
+
+git log --oneline  // shows commits and messages
+
+
+gitlens vscode plugin
+
+
+git add . // stage all
+git reset . // unstage all
+
+git add filename
+git reset filename
+
+git reset --hard // destroys everything
+
+
+git stash -u
+git stash pop
+
+
+
+
+
+
+git pull
+
+
+
+
+git rebase // changes the flow, puts the branches in the master flow
+
+
+
+REWRITING HISTORY
+Rewriting Git History - Amend, Reword, Delete, Reorder, Squash and Split
+https://www.youtube.com/watch?v=ElRzTuYln0M
+
+AMEND
+git commit --amend --no-edit // adds newly staged changes to the previous commit
+
+REWORD
+CHANGE A MESSAGE TWO COMMITS BACKWARD
+git rebase -i HEAD~2  // operate on 2 commits back from head
+
+CHANGE pick TO reword
+VIM save and close: ESC :wq 
+this leads to new VIM  window where we can edit the message
+
+
+

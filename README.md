@@ -23,3 +23,5 @@ git add .
 git commit -m 'make an edit'
 git push
 ```
+
+## add git.txt
