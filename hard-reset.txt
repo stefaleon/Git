@@ -1,0 +1,45 @@
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git log --oneline
+75e4b32 (HEAD -> master, origin/master, origin/HEAD) Merge branch 'master' of https://github.com/stefaleon/Git
+ec91543 branches
+aa141ce branches
+0b82c17 lalala
+fbcd0fd zzz
+e42479d add c.txt
+3bb2fe4 add b.txt
+2dc40cf add git.txt
+44f5ef1 make an edit
+530a880 initial
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git reset --hard 2dc40cf
+HEAD is now at 2dc40cf add git.txt
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git status
+On branch master
+Your branch is behind 'origin/master' by 7 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git push
+To https://github.com/stefaleon/Git.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/stefaleon/Git.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git push origin 2dc40cf:master -f
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/stefaleon/Git.git
+ + 75e4b32...2dc40cf 2dc40cf -> master (forced update)
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.

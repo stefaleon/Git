@@ -1,3 +1,7 @@
+//force revert the remote (github)
+git push origin <commit hash>:master -f
+
+
 
 git log --oneline  // shows commits and messages
 
@@ -12,6 +16,7 @@ git add filename
 git reset filename
 
 git reset --hard // destroys everything
+git reset --hard 2dc40cf // back to commit 2dc40cf
 
 
 git stash -u
@@ -19,6 +24,20 @@ git stash pop
 
 
 
+
+
+git branch // lists branches
+git branch b1 // creates b1
+git checkout b1 // goes to b1
+git checkout -b b2 // creates and goes to b2
+git checkout master // goes to master
+
+
+// while on master
+git merge b1 // brings the commits of b1 to master
+
+git branch -d b1 //removes b1
+git branch -D b1 //force removes b1 even with unstaged changes
 
 
 
