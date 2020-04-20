@@ -1,0 +1,112 @@
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git log --oneline
+935769f (HEAD -> master) a3
+6ec60da a2
+7f7b258 a1
+c5114c5 (origin/master, origin/HEAD) hard reset
+2dc40cf add git.txt
+44f5ef1 make an edit
+530a880 initial
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git rebase origin
+Current branch master is up to date.
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git rebase -i HEAD~3
+Successfully rebased and updated refs/heads/master.
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git log --oneline
+c5114c5 (HEAD -> master, origin/master, origin/HEAD) hard reset
+2dc40cf add git.txt
+44f5ef1 make an edit
+530a880 initial
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git rebase origin
+Current branch master is up to date.
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        a.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git add .
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git commit -m 'a1'
+[master 4c5c8b7] a1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 a.txt
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 324 bytes | 324.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/stefaleon/Git.git
+   c5114c5..4c5c8b7  master -> master
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git log --oneline
+4c5c8b7 (HEAD -> master, origin/master, origin/HEAD) a1
+c5114c5 hard reset
+2dc40cf add git.txt
+44f5ef1 make an edit
+530a880 initial
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git rebase -i HEAD~1
+Successfully rebased and updated refs/heads/master.
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git status
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git status
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git push
+To https://github.com/stefaleon/Git.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/stefaleon/Git.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
