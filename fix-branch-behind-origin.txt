@@ -1,0 +1,53 @@
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git status
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   rebase-drop.txt
+
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git commit -m 'rebase and drop'
+[master a5f5f59] rebase and drop
+ 1 file changed, 112 insertions(+)
+ create mode 100644 rebase-drop.txt
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git push
+To https://github.com/stefaleon/Git.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/stefaleon/Git.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git log --oneline
+a5f5f59 (HEAD -> master) rebase and drop
+c5114c5 hard reset
+2dc40cf add git.txt
+44f5ef1 make an edit
+530a880 initial
+
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git push origin c5114c5:master -f
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/stefaleon/Git.git
+ + 4c5c8b7...c5114c5 c5114c5 -> master (forced update)
+
+maimous@i5-4590 MINGW64 ~/Desktop/Git (master)
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.16 KiB | 1.16 MiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/stefaleon/Git.git
+   c5114c5..a5f5f59  master -> master
