@@ -1,0 +1,31 @@
+maimous@i5-4590 MINGW64 ~/Desktop/contact-keeper-code-along (master)
+$ git commit -m '68 Add Contact'
+[master 89f68d5] 68 Add Contact
+ 3 files changed, 36 insertions(+), 30 deletions(-)
+
+maimous@i5-4590 MINGW64 ~/Desktop/contact-keeper-code-along (master)
+$ git push
+Counting objects: 11, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 1.17 KiB | 1.17 MiB/s, done.
+Total 11 (delta 9), reused 0 (delta 0)
+remote: Resolving deltas: 100% (9/9), completed with 9 local objects.
+To https://github.com/stefaleon/contact-keeper-code-along.git
+   2045da1..89f68d5  master -> master
+
+maimous@i5-4590 MINGW64 ~/Desktop/contact-keeper-code-along (master)
+$ git branch s10-68
+
+maimous@i5-4590 MINGW64 ~/Desktop/contact-keeper-code-along (master)
+$ git push origin s10-68
+Total 0 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 's10-68' on GitHub by visiting:
+remote:      https://github.com/stefaleon/contact-keeper-code-along/pull/new/s10-68
+remote:
+To https://github.com/stefaleon/contact-keeper-code-along.git
+ * [new branch]      s10-68 -> s10-68
+
+maimous@i5-4590 MINGW64 ~/Desktop/contact-keeper-code-along (master)
+$
