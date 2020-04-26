@@ -23,7 +23,8 @@ git stash -u
 git stash pop
 
 
-
+// remove a file from tracking
+git rm --cached filename
 
 
 git branch // lists branches
