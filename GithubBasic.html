@@ -1,0 +1,78 @@
+<p><br /></p>
+
+<p>Install git globally</p>
+
+<p><code>npm i git -g</code></p>
+
+<p><br /></p>
+
+<p>
+  1. in the root folder of your project create a file named <em>.gitignore</em>
+</p>
+
+<p>its content for start is those lines</p>
+
+<pre class="prettyprint linenums">
+node_modules
+
+config/default.json</pre
+>
+
+<p>
+  which mean "don't include the node_modules folder and the config/default.json
+  file
+</p>
+
+<p>2. In the console type <code>git init</code>&nbsp; // initiates a repo</p>
+
+<p>3. <code>git add .</code>&nbsp; // add all files in order to commit</p>
+
+<p>
+  4. <code>git commit -m 'YOUR_DESCRIPTIVE_MESSAGE'</code>&nbsp; // make the
+  commit
+</p>
+
+<p>YOUR_DESCRIPTIVE_MESSAGE is just some text</p>
+
+<p><br /></p>
+
+<p>5. Make&nbsp; a github account and login to github</p>
+
+<p>6. From the top-right select the + sign , New Repository</p>
+
+<p>7. Set a name, e.g <em>myrepo</em></p>
+
+<p>8. In the next screen copy the lines from the paragraph</p>
+
+<p><em>…or push an existing repository from the command line</em></p>
+
+<p>e.g.</p>
+
+<pre class="prettyprint linenums">
+git remote add origin https://github.com/glen/myrepo.git
+
+git push -u origin master</pre
+>
+
+<p>9. Paste those lines in the console and enter</p>
+
+<p>
+  10. Now the contents of your project (except the .gitignore includes) are
+  uploaded to a repository in github which you can share via the url like
+</p>
+
+<p><strong>https://github.com/glen/myrepo</strong></p>
+
+<p><br /></p>
+
+<p>
+  After on, if you update your code you can be updating your local commits with
+</p>
+
+<p><code>git add .</code></p>
+
+<p><code>git commit -m 'YOUR_NEW_COMMIT_MESSAGE"</code></p>
+
+<p>and also update the github remote copy with</p>
+
+<p><code>git push</code></p>
